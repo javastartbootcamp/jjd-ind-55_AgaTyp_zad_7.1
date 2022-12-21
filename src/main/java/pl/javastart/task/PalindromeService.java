@@ -15,7 +15,7 @@ public class PalindromeService {
             int j = array.length;
 
             for (int i = 0; i < array.length / 2; i++) {
-                if (array[i] != array[j-1]) {
+                if (array[i] != array[j - 1]) {
                     isPal = false;
                     break;
                 }

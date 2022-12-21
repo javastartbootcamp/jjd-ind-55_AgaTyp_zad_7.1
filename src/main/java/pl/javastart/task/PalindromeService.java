@@ -12,19 +12,14 @@ public class PalindromeService {
         } else if (array.length == 0) {
             isPal = false;
         } else {
-            int[] revArray = new int[array.length];
             int j = array.length;
 
-            for (int k : array) {
-                revArray[j - 1] = k;
-                j = j - 1;
-            }
-
-            for (int i = 0; i < array.length; i++) {
-                if (array[i] != revArray[i]) {
+            for (int i = 0; i < array.length / 2; i++) {
+                if (array[i] != array[j-1]) {
                     isPal = false;
                     break;
                 }
+                j = j - 1;
             }
         }
 
